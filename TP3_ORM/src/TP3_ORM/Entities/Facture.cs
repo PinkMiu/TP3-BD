@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TP3_ORM.Entities
 {
-    public class Facture
+    public class Facture: Entity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -17,7 +17,7 @@ namespace TP3_ORM.Entities
         public DateTime DATE_FACTURATION { get; set; }
         [Required]
         public float MONTANT_FACTURE { get; set; }
-        [ForeignKey(), Required]
+        [ForeignKey("NUMERO_CONTRAT"), Required]
         public int NUMERO_CONTRAT { get; set; }
 
     }
