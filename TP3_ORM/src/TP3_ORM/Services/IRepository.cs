@@ -9,12 +9,13 @@ using TP3_ORM.Entities;
 
 namespace TP3_ORM.Services
 {
-    public  interface IRepository 
+    public  interface IRepository <T> where T : Entity
     {
-        void Add(Entity myEntity);
-        void Update(Entity myEntity);
-        void Delete(Entity myEntity);
-        void Cascade();
+        IEnumerable<T> GetAll();
+        void Add(T myEntity);
+        void Update(T myEntity);
+        void Delete(T myEntity);
+        void Cascade(T myEntity);
 
 
     }

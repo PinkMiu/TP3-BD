@@ -14,6 +14,10 @@ namespace TP3_ORM.DataAccessLayer
     {
         public DbSet<Client> Clients { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Artiste> Artistes { get; set; }
+        public DbSet<Groupe> Groupes { get; set; }
+        public DbSet<Facture> Factures { get; set; }
+        public DbSet<Contrat> Contrats { get; set; }
 
         public OurDbContext(DbContextOptions<OurDbContext> options)
             : base(options)
