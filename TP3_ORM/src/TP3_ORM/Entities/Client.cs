@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TP3_ORM.Entities
 {
-    public class Client
+    public class Client : Entity
     {
         [Key]
         public string CODE_CLIENT { get; set; }
