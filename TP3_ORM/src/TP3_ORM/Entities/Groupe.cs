@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TP3_ORM.Entities
 {
-    public class Groupe
+    public class Groupe: Entity
     {
         [Key]
         public string NOM_GROUPE { get; set; }
