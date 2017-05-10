@@ -20,5 +20,6 @@ namespace TP3_ORM.Entities
         [ForeignKey("NUMERO_CONTRAT"), Required]
         public int NUMERO_CONTRAT { get; set; }
 
+        public Contrat CONTRAT { get; set; }
     }
 }

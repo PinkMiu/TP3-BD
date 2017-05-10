@@ -21,8 +21,8 @@ namespace TP3_ORM.Entities
         [Required]
         public bool BONNE_REFERENCE { get; set; }
 
-        //[ForeignKey()]
-        //public string REFERENCE { get; set; }
+        public ICollection<Contrat> CONTRATS { get; set; }
+
     }
 }
 

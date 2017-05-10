@@ -14,5 +14,8 @@ namespace TP3_ORM.Entities
         [Key, ForeignKey("NOM_GROUPE")]
         public string NOM_GROUPE { get; set; }
         public string ROLE { get; set; }
+
+        public Artiste ARTISTE { get; set; }
+        public Groupe GROUPE { get; set; }
     }
 }
