@@ -32,11 +32,16 @@ namespace TP3_ORM.DataAccessLayer
             _context.SaveChanges();
         }
 
-        public void Delete(T entity)
+        public void Delete(T entity) //Nos entités ne peuvent pas avoir le comportement de suppression avec et sans Cascade, car cela dépend du paramètre 
+                                     //que l'on établie dans la méthode OnModelCreating de notre DBContext. Alors, certaines entités auront le comportement cascade,
+                                     //et d'autre ne l'auront pas. Nous pourrons alors testé les deux comportements. 
         {
             _context.Set<T>().Remove(entity);
             _context.SaveChanges();
         }
-        public void Cascade(T entity) { }
+        public void DeleteCascade(T entity)
+        {
+            this.Delete(entity);
+        }
     }
 }

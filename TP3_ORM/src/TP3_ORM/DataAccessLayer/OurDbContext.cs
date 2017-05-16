@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using TP3_ORM.Entities;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.ModelConfiguration.Configuration;
 
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -39,6 +40,7 @@ namespace TP3_ORM.DataAccessLayer
                         .HasMany(c => c.ROLES)
                         .WithOne(e => e.ARTISTE)
                         .IsRequired();
+                        
 
             // Groupe - Role
             modelBuilder.Entity<Groupe>()
