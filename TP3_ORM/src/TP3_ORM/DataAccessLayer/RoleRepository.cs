@@ -37,6 +37,7 @@ namespace TP3_ORM.DataAccessLayer
             _context.Set<T>().Remove(entity);
             _context.SaveChanges();
         }
+
         public void Cascade(T entity) { }
     }
 }

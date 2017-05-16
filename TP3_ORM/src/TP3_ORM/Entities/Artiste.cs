@@ -22,5 +22,7 @@ namespace TP3_ORM.Entities
         [Required]
         public int NAS { get; set; }
 
+        public ICollection<Role> ROLES { get; set; }
+
     }
 }

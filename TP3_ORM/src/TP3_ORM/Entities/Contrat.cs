@@ -24,6 +24,10 @@ namespace TP3_ORM.Entities
         public string NOM_GROUPE { get; set;  }
         [ForeignKey("CODE_CLIENT"), Required]
         public string CODE_CLIENT { get; set; }
+
+        public Groupe GROUPE { get; set; }
+        public Client CLIENT { get; set; }
+        public Facture FACTURE { get; set; } 
     }
 
 }
