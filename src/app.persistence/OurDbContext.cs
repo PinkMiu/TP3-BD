@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TP3_ORM.Entities;
 using System.ComponentModel.DataAnnotations;
@@ -64,5 +63,27 @@ namespace TP3_ORM.DataAccessLayer
 
         }
 
+    }
+
+    internal class IndexAttribute
+    {
+        private string v;
+
+        public IndexAttribute(string v)
+        {
+            this.v = v;
+        }
+
+        public bool IsUnique { get; set; }
+    }
+
+    internal class IndexAnnotation
+    {
+        private IndexAttribute[] indexAttribute;
+
+        public IndexAnnotation(IndexAttribute[] indexAttribute)
+        {
+            this.indexAttribute = indexAttribute;
+        }
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TP3_ORM.Entities;
 using TP3_ORM.Services;
@@ -11,7 +10,7 @@ using TP3_ORM.Services;
 
 namespace TP3_ORM.DataAccessLayer
 {
-    public class RoleRepository<T> : IRepository<T> where T : Entity
+    public class ClientRepository<T> : IRepository<T> where T: Entity
     {
         private readonly DbContext _context;
 
@@ -37,7 +36,6 @@ namespace TP3_ORM.DataAccessLayer
             _context.Set<T>().Remove(entity);
             _context.SaveChanges();
         }
-
         public void Cascade(T entity) { }
     }
 }
